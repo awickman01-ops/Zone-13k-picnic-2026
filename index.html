@@ -1,41 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <title>Document Viewer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zone 13k Picnic 2026</title>
   <style>
+    :root { --bg:#f7f7f7; --card:#ffffff; --border:#d0d0d0; --text:#111; }
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f7f7f7;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 16px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 16px;
     }
     h1 {
-      text-align: center;
+      margin: 0 0 6px;
+      font-size: 28px;
+    }
+    p {
+      margin: 0;
+      opacity: 0.8;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
     .pdf-container {
       width: 100%;
-      height: 90vh;
-      border: 1px solid #ccc;
+      height: 88vh;
+      border: 0;
+      display: block;
+      background: #fff;
     }
-    .download {
+    .actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      padding: 12px;
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: #111;
+      background: #fff;
+      font-weight: 600;
+    }
+    .btn:hover { background: #f0f0f0; }
+    .btn.primary {
+      background: #2563eb;
+      border-color: #2563eb;
+      color: #fff;
+    }
+    .btn.primary:hover { background: #1d4ed8; }
+    footer {
       text-align: center;
-      margin-top: 15px;
+      padding: 14px 0 4px;
+      font-size: 12px;
+      opacity: 0.65;
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <h1>Zone 13k Picnic 2026</h1>
+      <p>View the PDF below or download a copy.</p>
+    </header>
 
-<h1>Document Viewer</h1>
+    <div class="card">
+      <iframe
+        class="pdf-container"
+        src="Zone_13k_picnic_2026.pdf"
+        title="Zone 13k Picnic 2026 PDF"
+      ></iframe>
 
-<iframe 
-  src="Zone-13K-picnic-2026.pdf" 
-  class="pdf-container">
-</iframe>
+      <div class="actions">
+        <a class="btn primary" href="Zone_13k_picnic_2026.pdf" target="_blank" rel="noopener">
+          Open PDF in New Tab
+        </a>
+        <a class="btn" href="Zone_13k_picnic_2026.pdf" download>
+          Download PDF
+        </a>
+      </div>
+    </div>
 
-<div class="download">
-  <a href="Zone-13K-picnic-2026.pdf" download>Download PDF</a>
-</div>
-
+    <footer>
+      If the PDF doesn’t display on mobile, tap “Open PDF in New Tab.”
+    </footer>
+  </div>
 </body>
 </html>
